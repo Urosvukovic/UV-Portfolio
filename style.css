@@ -102,7 +102,7 @@ section {
 }
 
 .banner h1 {
-    font-size: 8em;
+    font-size: 6em;
     font-weight: 500;
     padding-top: 1.5em;
     color: #F2F2F2;
@@ -140,7 +140,7 @@ section {
 .about-info h1 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 600;
     border-bottom: 1px solid #0D0925;
     padding-bottom: .4em;
@@ -149,7 +149,7 @@ section {
 .about-info h2,
 .about-floats h2 {
     text-align: center;
-    font-size: 2.1em;
+    font-size: 2em;
     font-weight: 600;
 }
 .about-info p {
@@ -180,14 +180,14 @@ section {
 .contact-info h1 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 600;
     padding-bottom: 0;
     margin-bottom: 0;
 }
 .skills-info p {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.2em;
     width: 60%;
     margin: 0 auto;
     padding: 1em 0;
@@ -210,13 +210,14 @@ section {
 .skill p {
     padding: 0 2em;
     font-size: 1.2em;
+    line-height: 1.7em;
     text-align: center;
 }
 
 .my-work {
     text-transform: uppercase;
     text-align: center;
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 600;
     border-bottom: 1px solid #0D0925;
     padding-bottom: .4em;
@@ -281,7 +282,8 @@ section {
 }
 .contact-info p {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.2em;
+    line-height: 1.7em;
     margin: 1.5em;
     letter-spacing: 1px;
 }
@@ -316,7 +318,7 @@ section {
     width: 100%;
     padding: 10px 0;
     outline: none;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 300;
     margin: 20px 0;
     resize: none;
@@ -453,7 +455,8 @@ section {
         color: #F2F2F2;
     }
     header.active ul li a:hover {
-        color: #CFC83C;
+        background-color: #CFC83C;
+        color: #000;
     }
     header .logo,
     header ul li a {
@@ -513,10 +516,6 @@ section {
         width: 100%;
     }
 
-    /*.contact-info h1 {
-        font-size: 3em;
-        font-weight: 300;
-    }*/
     .row100 {
         flex-direction: column;
     }
@@ -535,7 +534,7 @@ section {
 
 @media (max-width: 655px) {
     .banner h1 {
-        font-size: 4em;
+        font-size: 3.5em;
         font-weight: 500;
     }
     .banner h2 {
@@ -550,13 +549,21 @@ section {
         width: 90%;
     }
 
+    .about-info h1 {
+        font-size: 3em;
+    }
     .about-info p,
     .about-float p {
         width: 100%;
         text-align: justify;
+        font-size: 1em;
         padding: 2em 0;
     }
 
+    .skills-info p,
+    .skill p {
+        font-size: 1em;
+    }
     .skill {
         width: 100%;
         float: none;
@@ -568,10 +575,14 @@ section {
     }
 
     .skills-info h1,
-    .contact-info h1 {
-        font-size: 4em;
+    .contact-info h1,
+    .my-work {
+        font-size: 3em;
+    }
+    .contact-info p {
+        font-size: 1em;
     }
     .copyright {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 }
