@@ -64,8 +64,28 @@ header ul li a {
     transition: 0.6s;
 }
 
-header ul li a:hover {
+.item a:hover {
     color: #CFC83C;
+}
+
+.item a:after {
+    content: '';
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    -webkit-transform: translateX(-50%) scale(0);
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #CFC83C;
+    transition: 0.6s;
+}
+
+.item a:hover:after {
+    transform: translateX(-50%) scaleX(1);;
+    -webkit-transform: translateX(-50%) scaleX(1);
 }
 
 .lang a {
@@ -137,7 +157,8 @@ section {
     margin: 0 auto;
 }
 
-.about-info h1 {
+.about-info h1,
+.skills-info h1 {
     text-transform: uppercase;
     text-align: center;
     font-size: 4em;
@@ -171,19 +192,15 @@ section {
     padding: 1.5em 2em;
     line-height: 1.7em;
 }
-
-.skills-info {
-    border-bottom: 1px solid #F2F2F2;
-    margin-bottom: 1em;
+.about-float a {
+    text-decoration: none;
 }
-.skills-info h1,
-.contact-info h1 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 4em;
-    font-weight: 600;
-    padding-bottom: 0;
-    margin-bottom: 0;
+.about-float a:hover {
+    color: #491CF4;
+}
+
+.skills-info h1 {
+    border-bottom: 1px solid #F2F2F2;
 }
 .skills-info p {
     text-align: center;
@@ -193,6 +210,10 @@ section {
     padding: 1em 0;
     line-height: 1.7em;
 }
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
 .skills-list img {
     display: block;
     max-width: 200px;
@@ -201,17 +222,13 @@ section {
 .skill {
     width: 25%;
     float: left;
+    margin-bottom: 1.5em;
 }
 .skill h1 {
     text-align: center;
     font-size: 2em;
+    font-weight: 400;
     margin-bottom: 0.75em;
-}
-.skill p {
-    padding: 0 2em;
-    font-size: 1.2em;
-    line-height: 1.7em;
-    text-align: center;
 }
 
 .my-work {
@@ -227,7 +244,7 @@ section {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .portfolio-item {
     position: relative;
@@ -279,6 +296,14 @@ section {
 
 .contact-info {
     margin-bottom: 2em;
+}
+.contact-info h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 600;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 .contact-info p {
     text-align: center;
@@ -437,7 +462,7 @@ section {
         width: 100%;
         height: 100vh;
         text-align: center;
-        overflow: auto;
+        overflow-y: scroll;
         background: #0D0925;
         visibility: hidden;
         opacity: 0;
@@ -454,9 +479,8 @@ section {
         font-size: 20px;
         color: #F2F2F2;
     }
-    header.active ul li a:hover {
-        background-color: #CFC83C;
-        color: #000;
+    .item a:hover {
+        color: #CFC83C;
     }
     header .logo,
     header ul li a {
@@ -466,6 +490,7 @@ section {
         -ms-flex-order: 1;
     }
     .lang a:hover {
+        background-color: #CFC83C;
         color: #000;
     }
 
