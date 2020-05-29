@@ -10,6 +10,13 @@ function toggle(){
     header.classList.toggle("active");
 }
 
+var path = window.location.href;
+
+if (path.includes("#")) { 
+    var newPath = path.slice(0, path.lastIndexOf("#"));
+    window.location.replace(newPath);
+}
+
 //const scroll = new SmoothScroll('header ul li a[href*="#"]');
 
 /*function smoothScroll(event) {
